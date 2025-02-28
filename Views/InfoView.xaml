@@ -1,0 +1,12 @@
+
+<UserControl x:Class="Memory.Views.InfoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:input="clr-namespace:System.Windows.Controls;assembly=Microsoft.Windows.Compatibility">
+    <Grid>
+        <Button Content="Wróć" Width="80" Height="30" 
+                HorizontalAlignment="Right" VerticalAlignment="Top" 
+                 Margin="10" Click="GoBack_Click"/>
+    </Grid>
+</UserControl>

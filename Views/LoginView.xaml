@@ -1,0 +1,38 @@
+<UserControl x:Class="Memory.Views.LoginView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Memory.Views"
+             x:Name="login">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
+            <TextBlock Text="Zaloguj się" FontSize="20" HorizontalAlignment="Center"/>
+            <TextBox Name="UsernameTextBox" Width="200" Margin="10"/>
+            <PasswordBox Name="PasswordBox" Width="200" Margin="10"/>
+            <Button Content="Zaloguj" Click="LoginButton_Click" HorizontalAlignment="Center"/>
+        </StackPanel>
+        <!-- Nowy przycisk w prawym dolnym rogu -->
+        <Button Content="Nowe konto" Click="ShowNewUserWindow"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Margin="10"
+                Padding="10,5"/>
+        <Popup 
+            Name="PopupNewUser" 
+            IsOpen="False" 
+            Placement="Center" 
+            StaysOpen="True">
+            <Border Background="White" BorderBrush="Black" BorderThickness="2" Padding="10">
+                <StackPanel >
+                    <TextBlock Text="Nowe konto" FontSize="20" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Wprowadź nazwę użytkownika" Foreground="Gray" Margin="0,0,0,5"/>
+                    <TextBox Name="NewUsernameTextBox" Width="200" Margin="10"/>
+                    <TextBlock Text="Wprowadź hasło" Foreground="Gray" Margin="0,0,0,5"/>
+                    <PasswordBox Name="NewPasswordBox" Width="200" Margin="10"/>
+                    <TextBlock Text="Wprowadź ponownie hasło" Foreground="Gray" Margin="0,0,0,5"/>
+                    <PasswordBox Name="RepeatNewPasswordBox" Width="200" Margin="10"/>
+                    <Button Content="Utworz" Click="CloseNewUserPopup_Click" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+        </Popup>
+    </Grid>
+</UserControl>

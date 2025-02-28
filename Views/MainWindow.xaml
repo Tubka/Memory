@@ -1,0 +1,30 @@
+<Window x:Class="Memory.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:Memory.ViewModels"
+        xmlns:views="clr-namespace:Memory.Views"
+        Title="Main Window" Height="450" Width="800">
+
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type vm:LoginViewModel}">
+            <views:LoginView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:StartViewModel}">
+            <views:StartView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:InfoViewModel}">
+            <views:InfoView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:HeaderViewModel}">
+            <views:HeaderView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:CompanyViewModel}">
+            <views:CompanyView/>
+        </DataTemplate>
+    </Window.Resources>
+
+    <Grid>
+        <ContentControl Content="{Binding CurrentView}" />
+    </Grid>
+</Window>
+

@@ -1,0 +1,16 @@
+<UserControl x:Class="Memory.Views.NewUserView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Memory.Views"
+             x:Name="NewAccount">
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Zaloguj się" FontSize="20" HorizontalAlignment="Center"/>
+            <TextBox Name="UsernameTextBox" Width="200" Margin="10"/>
+            <PasswordBox Name="PasswordBox" Width="200" Margin="10"/>
+            <PasswordBox Name="RepeatPasswordBox" Width="200" Margin="10"/>
+            <Button Content="Utworz konto" Click="LoginButton_Click" HorizontalAlignment="Center"/>
+        </StackPanel>
+
+    </Grid>
+</UserControl>
